@@ -8,11 +8,10 @@ const profileRoute = require('./routes/profileRoute');
 const postsRoute = require('./routes/postsRoute');
 const usersRoute = require('./routes/usersRoute');
 
-const { mongoURI } = require('./config/keys');
+const { port, mongoURI } = require('./config/keys');
 const { configPassport } = require('./config/passport');
 
 const app = express();
-const port = process.env.PORT || 5050;
 
 // use 3rd party packages
 app.use(morgan('dev'));
